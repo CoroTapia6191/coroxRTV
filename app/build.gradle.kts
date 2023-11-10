@@ -1,8 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -32,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
@@ -71,17 +69,4 @@ dependencies {
 
     //
     implementation("androidx.navigation:navigation-compose:2.7.5");
-
-    //injection -view model
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-    implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
-
-    //datastore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes = true
 }

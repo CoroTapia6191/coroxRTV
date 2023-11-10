@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">CxRadiosTv</string>
     <string name="welcome">Bienvenid@</string>
-    <string name="minVersionAlert">Existe una nueva versión por favor actualice la palicación</string>
 </resources>
